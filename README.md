@@ -24,10 +24,9 @@ chmod +x update.sh
 Setup a Cron job to execute the script periodically.
 
 Log into your server and type `crontab -e`. Next you should be editing the cron file, add in the following line at the bottom of the file.
-Replace `<absolute_path>` with the real path to the clonned repo.
 
 ```
-*/30 * * * * /bin/bash -c "<absolute_path>/nfi-tags-auto-update/update.sh"
+*/30 * * * * /bin/bash -c "nfi-tags-auto-update/update.sh"
 ```
 
 Once that is saved, the updater will check for new git updates every 30 mins and notify you via Telegram if there was anything new so you can restart it.
