@@ -15,6 +15,7 @@ Open `update.sh` file and tweak some variables:
 - `ROOT_PATH` - path to the directory where `NostalgiaForInfinityNext` and `freqtrade` directories are places
 - `TG_TOKEN` - Telegram token you've got for the bot
 - `TG_CHAT_ID` - Telegram chat ID with your bot
+- `TG_FT_BOT_ID` - Telegram ID of your Freqtrade bot, the one that ends in `bot`
 
 Make the file executable:
 ```
