@@ -43,4 +43,11 @@ if [ "$latest_tag" != "$current_tag" ]; then
                 --data "chat_id=$TG_CHAT_ID" \
                 --data "parse_mode=markdown" \
                 "https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
+else
+	#Notify user about check for NFI updates
+	upd_notify_msg="NFI strategy was checked for updates. Latest: *${latest_tag}* / Current: *${current_tag}*"
+	curl -s --data "text=${upd_notify_msg}" \
+        	--data "chat_id=$TG_CHAT_ID" \
+        	--data "parse_mode=markdown" \
+        	"https://api.telegram.org/bot${TG_TOKEN}/sendMessage"
 fi
