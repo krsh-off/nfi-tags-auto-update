@@ -1,12 +1,12 @@
 #!/bin/bash
 
-TG_TOKEN=""
-TG_CHAT_ID=""
-TG_FT_BOT_ID=""
-ROOT_PATH="/home/ubuntu"
+TG_TOKEN="1921275641:AAHQaw3w7VoY21P1el1TbBn2REUe2VEnuwI"
+TG_CHAT_ID="943472491"
+TG_FT_BOT_ID="omacoder_freqtrade_bot"
+ROOT_PATH="/root"
 
-NFI_PATH="${ROOT_PATH}/NostalgiaForInfinity/NostalgiaForInfinityNext.py"
-FT_PATH="${ROOT_PATH}/freqtrade/user_data/strategies/NostalgiaForInfinityNext.py"
+NFI_PATH="${ROOT_PATH}/NostalgiaForInfinity/NostalgiaForInfinityNextGen.py"
+FT_PATH="${ROOT_PATH}/freqtrade/user_data/strategies/NostalgiaForInfinityNextGen.py"
 GIT_URL="https://github.com/iterativv/NostalgiaForInfinity"
 
 # Go to NFI directory
