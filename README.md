@@ -1,8 +1,10 @@
 # NFI Tags Auto Updater
 
-Inspired by https://github.com/shanejones/nfi-auto-update
+Simple Bash script to check for [NostalgiaForInfinity](https://github.com/iterativv/NostalgiaForInfinity) newly added tags or commits and update it for usage with [Freqtrade](https://github.com/freqtrade/freqtrade) bot.
 
-Simple Bash script to check for [NostalgiaForInfinityNext](https://github.com/iterativv/NostalgiaForInfinity) newly added tags and update it for usage with [Freqtrade](https://github.com/freqtrade/freqtrade) bot.
+# Assumptions
+
+- Both `freqtrade` and `NostalgiaForInfinity` folders are in the same path level (e.g. /home/ubuntu)
 
 ## Installation
 
@@ -16,6 +18,8 @@ Open `update.sh` file and tweak some variables:
 - `TG_TOKEN` - Telegram token you've got for the bot
 - `TG_CHAT_ID` - Telegram chat ID with your bot
 - `TG_FT_BOT_ID` - Telegram ID of your Freqtrade bot, the one that ends in `bot`
+- `MODE` - check out tags (default) or latest commit in the repo
+- `AUTO_RELOAD` - keep it `true` if you want to fully automate the process
 
 Make the file executable:
 ```
