@@ -41,8 +41,15 @@ if [ "$MODE" == "tags" ]; then
                         message+="%0A%0A"
                         message+="Config has been re-loaded, no actions are required."
 
-                        # Do auto-reload
-                        python3 "${FT_DIR}/scripts/rest_client.py" --config "$FT_DIR/user_data/config.json" reload_config
+                        sudo cp configs/pairlist-volume-kucoin-usdt.json ${FT_DIR}/user_data
+                        sudo cp configs/blacklist-kucoin.json ${FT_DIR}/user_data
+                        sudo cp NostalgiaForInfinityX.py ${FT_DIR}/user_data/strategies
+
+                        cd ${FT_DIR}
+                        docker compose down
+                        docker compose pull
+                        docker compose up -d
+                        cd -
                 else
                         # Compose the main message send by the bot
                         message="NFI is updated to tag: *${latest_tag}*"
@@ -77,9 +84,16 @@ elif [ "$MODE" == "latest" ]; then
                         message="NFI is updated to commit: *${latest_commit}*"
                         message+="%0A%0A"
                         message+="Config has been re-loaded, no actions are required."
-        
-                        # Do auto-reload
-                        python3 "${FT_DIR}/scripts/rest_client.py" --config "$FT_DIR/user_data/config.json" reload_config
+                        
+                        sudo cp configs/pairlist-volume-kucoin-usdt.json ${FT_DIR}/user_data
+                        sudo cp configs/blacklist-kucoin.json ${FT_DIR}/user_data
+                        sudo cp NostalgiaForInfinityX.py ${FT_DIR}/user_data/strategies
+
+                        cd ${FT_DIR}
+                        docker compose down
+                        docker compose pull
+                        docker compose up -d
+                        cd -
                 else
                         # Compose the main message send by the bot
                         message="NFI is updated to commit: *${latest_commit}*"
