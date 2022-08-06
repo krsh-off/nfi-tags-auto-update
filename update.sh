@@ -9,7 +9,7 @@ TG_TOKEN=""
 TG_CHAT_ID=""
 TG_FT_BOT_ID=""
 
-ROOT_PATH="/home/ubuntu"
+ROOT_PATH="/root"
 NFI_DIR="${ROOT_PATH}/NostalgiaForInfinity"
 FT_DIR="${ROOT_PATH}/freqtrade/"
 
